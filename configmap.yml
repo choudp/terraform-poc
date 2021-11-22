@@ -1,0 +1,39 @@
+[
+  {
+    "binary_data" = tomap(null) /* of string */
+    "data" = tomap({
+      "mapAccounts" = <<-EOT
+      []
+      
+      EOT
+      "mapRoles" = <<-EOT
+      - "groups":
+        - "system:bootstrappers"
+        - "system:nodes"
+        "rolearn": "arn:aws:iam::787106429458:role/education-eks-TPQBrlYx2021111317073026290000000c"
+        "username": "system:node:{{EC2PrivateDNSName}}"
+      
+      EOT
+      "mapUsers" = <<-EOT
+      []
+      
+      EOT
+    })
+    "id" = "kube-system/aws-auth"
+    "metadata" = tolist([
+      {
+        "annotations" = tomap(null) /* of string */
+        "generate_name" = ""
+        "generation" = 0
+        "labels" = tomap({
+          "app.kubernetes.io/managed-by" = "Terraform"
+          "terraform.io/module" = "terraform-aws-modules.eks.aws"
+        })
+        "name" = "aws-auth"
+        "namespace" = "kube-system"
+        "resource_version" = "639"
+        "uid" = "8f6fe371-566e-4a04-950c-76c18e5fea2b"
+      },
+    ])
+  },
+]
